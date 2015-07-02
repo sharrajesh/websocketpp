@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <WEBSOCKETPP_DIR>$(MSBuildThisFileDirectory)</WEBSOCKETPP_DIR>
+    <WEBSOCKETPP_INC_DIR>$(WEBSOCKETPP_DIR)</WEBSOCKETPP_INC_DIR>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30128.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <BuildMacro Include="WEBSOCKETPP_DIR">
+      <Value>$(WEBSOCKETPP_DIR)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="WEBSOCKETPP_INC_DIR">
+      <Value>$(WEBSOCKETPP_INC_DIR)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(WEBSOCKETPP_INC_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+</Project>
